@@ -1,0 +1,109 @@
+<view>
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true" indicator-dots="true">
+  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+    <swiper-item>
+    
+      <image src="{{item}}" class="slide-image"/>
+     
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 轮播结束//精选主题部分 -->
+<!-- 精选主题部分,点击里面的商品,就进入到list页面里面,
+先实现list里面的效果,再进行实现最近新品里面details的效果 -->
+<view class='selected'>
+  <view class='select_title'><text>精选主题</text></view>
+  <view class='select_top'>
+  <!-- 1 -->
+    <view class='select_top_small'>
+      <navigator url='../list/list'>
+        <image src='../../img/s1.png'></image>
+      </navigator>
+    </view>
+    <!-- 2 -->
+    <view class='select_top_small'>
+      <navigator url='../list/list'>
+        <image src='../../img/s2.png'></image>
+      </navigator>
+    </view>
+  <!-- select-top -->
+  </view>
+  <view class='select_bottom'>
+    <navigator url='../list/list'>
+      <image src='../../img/s3.png'></image>
+    </navigator>
+  </view>
+<!-- select -->
+</view>
+<!-- 精选主题结束//开始最近新品部分 -->
+<view class='newest'>
+  <view class='newest_title'><text>最近新品</text></view>
+   <view class='list_box'>
+  <!-- 1 -->
+    <view class='newest_list'>
+      <navigator url='../details/details'>
+        <image src='../../img/s6.png'></image>
+        <view class='newest_text'><text>芹菜 半斤</text></view>
+        <view class='newest_text'><text>¥ 2.5</text></view>
+      </navigator>
+    </view>
+  <!-- 2 -->
+   <view class='newest_list'>
+      <navigator url='../details/details'>
+        <image src='../../img/s4.png'></image>
+        <view class='newest_text'><text>蘑菇 375g</text></view>
+        <view class='newest_text'><text>¥ 4.5</text></view>
+      </navigator>
+    </view>
+   
+   
+  <!-- list-box -->
+  </view>
+
+    <view class='list_box'>
+  <!-- 1 -->
+    <view class='newest_list'>
+      <navigator url='../details/details'>
+        <image src='../../img/s5.png'></image>
+        <view class='newest_text'><text>荠荠菜 500g</text></view>
+        <view class='newest_text'><text>¥ 2.5</text></view>
+      </navigator>
+    </view>
+  <!-- 2 -->
+   <view class='newest_list'>
+      <navigator url='../details/details'>
+        <image src='../../img/s6.png'></image>
+        <view class='newest_text'><text>蘑菇 375g</text></view>
+        <view class='newest_text'><text>¥ 4.5</text></view>
+      </navigator>
+    </view>
+   
+   
+  <!-- list-box -->
+  </view>
+
+    <view class='list_box'>
+  <!-- 1 -->
+    <view class='newest_list'>
+      <navigator url='../details/details'>
+        <image src='../../img/s4.png'></image>
+        <view class='newest_text'><text>芹菜 半斤</text></view>
+        <view class='newest_text'><text>¥ 2.5</text></view>
+      </navigator>
+    </view>
+  <!-- 2 -->
+   <view class='newest_list'>
+      <navigator url='../details/details'>
+        <image src='../../img/s6.png'></image>
+        <view class='newest_text'><text>蘑菇 375g</text></view>
+        <view class='newest_text'><text>¥ 4.5</text></view>
+      </navigator>
+    </view>
+   
+   
+  <!-- list-box -->
+  </view>
+</view>
+<!-- bbb -->
+</view>

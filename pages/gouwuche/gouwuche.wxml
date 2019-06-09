@@ -1,0 +1,80 @@
+
+<view class="main">
+  <view>
+    <view class='cart_box'>
+<!--cart-list 商品列表 -->
+<!-- 如不提供 wx:key会报一个warning(一个警告提示)如果明确知道该列表是静态，或者不必关注其顺序，可以选择忽略。它等于的值是在需要遍历的数组里面的关键字,比如说index,或者id,任意一个数组里面存在的相同关键词//////为什么要设置关键词,因为要在每一次数组中的数据渲染整个页面的时候,它的数组里面的对象会乱排序,加上wx:key之后,它会按原来的顺序来排,这样就增强了再一次的页面渲染 -->
+      <view class='cart_list' wx:for="{{carts}}" wx:key='{{index}}'>
+        <!-- 微信组件里面提供的icon方法 -->
+        <!-- 在这里的{{index}}是真正的要遍历数组的index,在这里通过data-index=""的方法传入到参e.currentTarget.dataset里面去,然后在js中使用index来对数组中的数据进行查找,修改 -->
+      <icon wx:if='{{item.selected}}' type='success' color='green' class='cart_pro_select' data-index="{{index}}" bindtap='selectList'/>
+      <icon wx:else type='circle' class='cart_pro_select' data-index="{{index}}" bindtap='selectList'/>
+      <!-- 商品图片部分 -->
+      <navigator url='../details/details'>
+        <image class='cart_thumb' src='{{item.image}}'></image>
+      </navigator>
+      <!-- 商品名称 -->
+      <text class='cart_pro_name'>{{item.title}}</text>
+      <!-- 商品价格 -->
+      <text class='cart_pro_price'>¥ {{item.price}}</text>
+      <!-- 商品数量加减 -->
+      <view class='cart_count_box'>
+        <text class='cart_count_down' bindtap='jian' data-index='{{index}}'>--</text>
+        <text class='cart_count_num'>{{item.num}}</text>
+        <text class='cart_count_add' bindtap='jia' data-index='{{index}}'>++</text>
+      </view>
+      <!-- 商品删除 -->
+      <text class='cart_del' bindtap='dellist' data-index='{{index}}'>x</text>
+        
+
+
+      <!-- cart-list/商品选择列表 -->
+      </view>
+
+
+
+
+
+
+
+
+
+<!-- cart-box -->
+    </view>
+  <!-- if/haslist -->
+  </view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- bbbb -->
+</view>
